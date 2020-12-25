@@ -1,0 +1,143 @@
+
+
+<ion-header>
+  <ion-toolbar color="mytheme" >
+    <ion-buttons slot="start">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+
+    
+    
+
+    <ion-input type="text" (click)="fun.navigate('search')" padding-start placeholder="I'm shopping for..." class="search-bar"></ion-input>
+    
+    <ion-buttons slot="end">
+      
+      <ion-button (click)="fun.navigate('cart')">
+        <ion-icon name="cart" slot="icon-only" no-margin class="white top-btn"></ion-icon>
+      </ion-button>
+      
+     <ion-button (click)="side_open()">
+        <ion-icon name="switch" slot="icon-only" *ngIf="segment!=data[1].title" no-margin class="white top-btn"></ion-icon>
+      </ion-button>
+    
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar color="mytheme" class="segmenttoolbarSection">
+      <ion-segment mode="md"  (ionChange)="seg($event)" scrollable="true" id="dag" class="segSection">
+        <ion-segment-button   [attr.id]="'seg_' + i" *ngFor="let item of data; let i = index;" no-margin no-padding (ionSelect)="update(i)"
+          class="my-btn" [value]="item.title" [ngClass]="{'btn-active':segment == item.title}">
+          <ion-text padding-horizontal class="text">{{item.title}}</ion-text>
+        </ion-segment-button>
+      </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+ <ion-slides pager="false" [options]="slideOpts" (ionSlideDidChange)="change()" (click)="preventDefault($event)" #Slides>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="Grocery"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide >
+      <app-productlist [recieved_data]="Vegetables"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="Fruits"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="MilkProduct"></app-productlist>
+    </ion-slide>
+    
+    <!--<ion-slide>
+      <app-productlist [recieved_data]="softdrink"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="toiletries"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="grain"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="organicfood"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="oils"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="cosmetics"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="gadget"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="utensils"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="milkproduct"></app-productlist>
+    </ion-slide>
+    
+    <ion-slide>
+      <app-productlist [recieved_data]="homedecor"></app-productlist>
+    </ion-slide>
+
+  
+
+  <div class="container"style="padding-top:20px">
+    <div class="text-center">
+      <img src="assets\shop.jpg" class="rounded-circle" alt="...">
+    </div>
+  </div>
+ <div class="container">
+  
+  <ion-card>  
+    <ion-card-header>  
+      <ion-card-subtitle>Details</ion-card-subtitle>  
+      <ion-card-title style="font-weight: bold;">Mr. Aniket Jain</ion-card-title>  
+      </ion-card-header>  
+    <ion-card-content>  
+        <h4>Seller :  Grocery </h4>
+        <br>
+        <h4>ShopName : Jain Groceries</h4>
+        <br>
+        <h4>Mobile No. : 9131195454</h4>
+        <br>
+        <h4>Email Id : aniketJain13@gmail.com</h4>
+        <br>
+        <h4>Address : ward No.6 ,Ashish Vihar Colony, katangi ,Balaghat,M.P </h4>  
+    </ion-card-content>  
+  </ion-card> 
+  <form>
+    
+    <br>
+    <input type="text" class="form-control" placeholder="Shop Registration No." id="email">
+    <br>
+    <input type="text" class="form-control" placeholder="Shop Name" id="pwd">
+    <br>
+    <input type="number" class="form-control" placeholder="Shop Contact No." id="email">
+    <br>
+    <input type="text" class="form-control" placeholder="Shop Address" id="email">
+    <br>
+    <div style="text-align: center;"><button type="submit" class="btn btn-primary">Register</button></div>
+  </form> 
+
+   </div>-->
+
+  </ion-slides>
+
+
+
+</ion-content>

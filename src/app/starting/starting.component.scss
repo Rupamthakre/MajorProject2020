@@ -1,0 +1,74 @@
+
+.ion-header{
+    height:60px;
+    background-color: #8dcce9;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius:30px;
+    box-shadow: 5px 5px 5px #8dcce9;
+    
+  }
+  
+  .ion-title{
+    font-size:25px;
+    font-family: cursive;
+    font-weight:bold;
+   margin-top:10px;
+   text-align:center; 
+  }
+  button{
+  
+    
+    width: 70%;
+    height: 60px;
+    color: black;
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: italic;
+    border: 1px solid #ffe699;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #ffe699;
+  }
+  h4{
+    font-size: medium;
+    font-family: cursive;
+    font-weight: bold;
+    color:black;
+  }
+  ion-card-title {
+    font-size:30px;
+    font-family: cursive;
+    font-weight: bold;
+    color:red;
+  
+  }
+  
+  
+  .container
+  {
+    //box-shadow: 3px 3px 3px 3px grey;
+    
+    padding-top:20px;
+  }
+  .rounded-circle
+  {
+    box-shadow: 2px 2px 2px 2px grey; 
+  
+  }
+  input{
+    box-shadow: 1px 1px 1px 1px grey;
+        
+    font-weight: bold;
+    color:black;
+  }
+  label,ion-list ion-item-divider ion-label
+  {
+    padding-left: 20px;
+    font-size:20px;
+    font-family: cursive;
+    font-weight: bold;
+    color:black;
+  }
+  
+  .my-custom-menu {
+    --width: 500px;
+  }
